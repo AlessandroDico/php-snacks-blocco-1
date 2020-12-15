@@ -12,14 +12,32 @@ $userName = $_GET["name"];
 $userMail = $_GET["mail"];
 $userAge = $_GET["age"];
 
-if (strlen($userName) > 3 && strpos($userMail, '.') !== false && strpos($userMail, '@') !== false && is_numeric($userAge)) {
-    echo 'Accesso riuscito';
-
-} else {
-    echo 'Accesso negato';
-}
-
+// if (strlen($userName) > 3 && !is_numeric($userName) && ctype_alpha($userName) &&  strpos($userMail, '.') !== false && strpos($userMail, '@') !== false && is_numeric($userAge) ) {
+//     echo 'Accesso riuscito';
+//
+// } else {
+//     echo 'Accesso negato';
+// }
 
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Snack-2</title>
+    </head>
+    <body>
+        <h1>
+            <?php
+            if (strlen($userName) > 3 && !is_numeric($userName) && ctype_alpha($userName) &&  strpos($userMail, '.') !== false && strpos($userMail, '@') !== false && is_numeric($userAge) ) {
+                echo 'Accesso riuscito';
+
+            } else {
+                echo 'Accesso negato';
+            }
+            ?>
+        </h1>
+    </body>
+</html>
