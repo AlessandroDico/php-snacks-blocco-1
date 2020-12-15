@@ -6,6 +6,7 @@
 // 3. age sia un numero.
 // Se tutto è ok stampare “Accesso riuscito”, altrimenti
 // “Accesso negato”
+
 // echo 'hello world';
 
 $userName = $_GET["name"];
@@ -28,14 +29,14 @@ $userAge = $_GET["age"];
         <meta charset="utf-8">
         <title>Snack-2</title>
     </head>
-    <body>
+    <body style="background-color: black;">
         <h1>
             <?php
             if (strlen($userName) > 3 && !is_numeric($userName) && ctype_alpha($userName) &&  strpos($userMail, '.') !== false && strpos($userMail, '@') !== false && is_numeric($userAge) ) {
-                echo 'Accesso riuscito';
+                echo "<h1 style='font-size:50px;color:green; text-align: center;'>Accesso consentito</h1>";
 
             } else {
-                echo 'Accesso negato';
+                echo "<h1 style='font-size:50px; color:red; text-align: center;'>Accesso negato</h1>";
             }
             ?>
         </h1>
