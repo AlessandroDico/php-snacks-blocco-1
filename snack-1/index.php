@@ -112,9 +112,7 @@ for ($i = 0; $i < count($matches); $i++) {
             <?php
             for ($i = 0; $i < count($nuovoArray); $i++) {
 
-                // var_dump($nuovoArray[$i]);
-                print_r($nuovoArray[$i]);
-                echo '<br>';
+                echo "<h2 style=\"color:blue;\">" . $nuovoArray[$i] . "</h2>";
 
             }
             ?>
