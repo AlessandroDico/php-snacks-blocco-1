@@ -103,8 +103,8 @@ for ($i = 0; $i < count($matches); $i++) {
         <meta charset="utf-8">
         <title>Snack-1</title>
     </head>
-    <body>
-        <h1>
+    <body style="background-color:#949494;">
+        <h1 style="font-size:50px; text-align:center;">
             Partite torneo 2020
         </h1>
         <span style="margin-right:150px;font-size:35px;">Squadre</span> <span style="font-size:35px;">Risultati</span>
@@ -119,10 +119,13 @@ for ($i = 0; $i < count($matches); $i++) {
         </p>
     </body>
 </html>
-<?php
 
+
+
+<?php
 //SECONDA SOLUZIONE
 /*
+
 $matches = [
     [
         "casa" => [
@@ -200,8 +203,8 @@ for ($i = 0; $i < count($matches); $i++) {
         <meta charset="utf-8">
         <title>Snack-1-Bis</title>
     </head>
-    <body>
-        <h1>
+    <body style="background-color:#949494;">
+        <h1 style="font-size:50px; text-align:center;">
             Partite torneo 2020
         </h1>
         <span style="margin-right:150px;font-size:35px;">Squadre</span> <span style="font-size:35px;">Risultati</span>
