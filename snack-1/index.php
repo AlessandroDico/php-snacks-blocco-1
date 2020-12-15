@@ -11,11 +11,11 @@ $matches = [
     [
         "match" => [
             "casa" => [
-                "team" => "milano",
+                "team" => "Olimpia Milano",
                 "punti" => 60
             ],
             "ospiti" => [
-                "team" => "cantù",
+                "team" => "Cantù",
                 "punti" => 40
             ],
         ],
@@ -23,12 +23,64 @@ $matches = [
     [
         "match" => [
             "casa" => [
-                "team" => "varese",
+                "team" => "Varese",
                 "punti" => 50
             ],
             "ospiti" => [
-                "team" => "cantù",
+                "team" => "Cantù",
                 "punti" => 45
+            ],
+        ]
+
+    ],
+    [
+        "match" => [
+            "casa" => [
+                "team" => "Varese",
+                "punti" => 50
+            ],
+            "ospiti" => [
+                "team" => "Virtus Bologna",
+                "punti" => 35
+            ],
+        ]
+
+    ],
+    [
+        "match" => [
+            "casa" => [
+                "team" => "Victoria Libertas",
+                "punti" => 50
+            ],
+            "ospiti" => [
+                "team" => "Virtus Bologna",
+                "punti" => 45
+            ],
+        ]
+
+    ],
+    [
+        "match" => [
+            "casa" => [
+                "team" => "Allianz Trieste",
+                "punti" => 50
+            ],
+            "ospiti" => [
+                "team" => "Brescia",
+                "punti" => 55
+            ],
+        ]
+
+    ],
+    [
+        "match" => [
+            "casa" => [
+                "team" => "Venezia Reyer",
+                "punti" => 50
+            ],
+            "ospiti" => [
+                "team" => "Olimpia Milano",
+                "punti" => 60
             ],
         ]
 
@@ -44,12 +96,6 @@ for ($i = 0; $i < count($matches); $i++) {
     $nuovoArray[] = $matches[$i]["match"]["casa"]["team"] . ' - ' . $matches[$i]["match"]["ospiti"]["team"] . ' | '. $matches[$i]["match"]["casa"]["punti"] . ' - ' . $matches[$i]["match"]["ospiti"]["punti"];
 }
 
-for ($i = 0; $i < count($nuovoArray); $i++) {
-
-    var_dump($nuovoArray[$i]);
-    print_r($nuovoArray[$i]);
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -58,14 +104,20 @@ for ($i = 0; $i < count($nuovoArray); $i++) {
         <title>Snack-1</title>
     </head>
     <body>
-        <p>
+        <h1>
+            Partite torneo 2020
+        </h1>
+        <span style="margin-right:150px;font-size:35px;">Squadre</span> <span style="font-size:35px;">Risultati</span>
+        <p style="font-size:25px;">
             <?php
-            for ($i = 0; $i < count($matches); $i++) {
-                echo $matches[$i]["match"]["casa"]["team"] . ' - ' . $matches[$i]["match"]["ospiti"]["team"] . ' | ';
-                echo $matches[$i]["match"]["casa"]["punti"] . ' - ' . $matches[$i]["match"]["ospiti"]["punti"];
+            for ($i = 0; $i < count($nuovoArray); $i++) {
+
+                // var_dump($nuovoArray[$i]);
+                print_r($nuovoArray[$i]);
+                echo '<br>';
+
             }
             ?>
-            <br>
         </p>
     </body>
 </html>
